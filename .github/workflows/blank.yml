@@ -20,8 +20,8 @@ jobs:
       shell: python
   
   run-windows-commands:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: windows-latest
+    steps:
     - name: directory Powershell
       run: Get-Location
     - name: Directory Bash
