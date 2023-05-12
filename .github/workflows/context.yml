@@ -6,14 +6,16 @@ jobs:
     steps:
       - name: Dump GitHub context
         id: github_context_step
-        run: echo '${{ toJSON(github) }}'
+        run: eccho '${{ toJSON(github) }}'
       - name: Dump job context
         run: echo '${{ toJSON(job) }}'
+        if: failure()
       - name: Dump steps context
         run: echo '${{ toJSON(steps) }}'
       - name: Dump runner context
         run: echo '${{ toJSON(runner) }}'
       - name: Dump strategy context
         run: echo '${{ toJSON(strategy) }}'
+        if: always()
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
