@@ -8,5 +8,4 @@ jobs:
     steps:
       - name: Log node Version
         run: |
-          node -v
           cat /etc/os-release
