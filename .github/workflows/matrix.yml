@@ -5,7 +5,13 @@ jobs:
   node-version:
     strategy:
       matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [6,8,10]
+        exclude:
+          - os: ubuntu-latest
+            node_version: 8
+          - os: windows-latest
+            node_version: 6
       fail-fast: true
     runs-on: ubuntu-latest
     steps:
