@@ -1,0 +1,11 @@
+name: Container
+on: push
+
+jobs:
+  node-docker:
+    runs-on: ubuntu-latest
+    container: mateocolombo:pokeapp:1.1.2
+    steps:
+      - name: Log node Version
+        run: |
+          node -v
